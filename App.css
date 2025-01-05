@@ -1,0 +1,157 @@
+/* General styles for the app */
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar .profile {
+  margin-bottom: 30px;
+}
+
+.sidebar .links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar .links ul li {
+  margin: 10px 0;
+}
+
+.sidebar .links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.user-product-orders {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.add-item-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.add-item-section input {
+  margin: 5px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-item-section button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.add-item-section button:hover {
+  background-color: #218838;
+}
+
+/* List Box */
+.list-box {
+  margin-top: 20px;
+  overflow-x: auto; /* Ensures table is scrollable if content overflows */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: black; /* Changed the background to black */
+  color: white; /* Set the text color to white for better contrast */
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #333; /* Darker background for the header */
+  color: white; /* Header text color */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #444; /* Slightly lighter black background for even rows */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #333; /* Slightly darker black background for odd rows */
+}
+
+tbody tr:hover {
+  background-color: #555555; /* Hover effect with a lighter shade of black */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .user-product-orders {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-item-section input {
+    width: 100%;
+  }
+
+  table, th, td {
+    padding: 10px;
+  }
+}
